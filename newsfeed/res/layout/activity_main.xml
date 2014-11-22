@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" 
+        android:text="@string/web"
+        /> 
+   
+    <Spinner
+        android:id="@+id/osversions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start"
+        android:layout_marginTop="15dp" />
+
+	<TextView
+        android:id="@+id/selVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/osversions"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp" />
+    
+    <TextView
+        android:id="@+id/selVersion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selVersion"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp" 
+        android:text="@string/select"/>
+    
+	
+	<RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/selVersion1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp" >
+	
+
+	<RadioButton
+	    android:id="@+id/radioButton1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+	    android:text="@string/TopStories" 
+	    android:onClick="onRadioButtonClicked"/>
+	
+	<RadioButton
+	    android:id="@+id/radioButton2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+	    android:text="@string/India" 
+	    android:onClick="onRadioButtonClicked"/>
+
+	<RadioButton
+	    android:id="@+id/radioButton3"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+	    android:text="@string/World" 
+	    android:onClick="onRadioButtonClicked"/>
+
+	<RadioButton
+	    android:id="@+id/radioButton4"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+	    android:text="@string/Sports" 
+	    android:onClick="onRadioButtonClicked"/>
+ </RadioGroup>
+ 
+	<Button
+	 android:id="@+id/SubmitButton"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_below="@+id/radioGroup1"
+     android:layout_marginLeft="5dp"
+     android:layout_marginTop="20dp"
+     android:text="@string/self_destruct"
+     android:onClick="selfDestruct" />
+	
+	
+	
+	
+	
+</RelativeLayout>
