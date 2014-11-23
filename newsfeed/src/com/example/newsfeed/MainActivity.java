@@ -1,4 +1,4 @@
-package com.example.newsfeed;
+package com.example.efilternewsfeed;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -21,8 +21,8 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
  TextView selVersion;
  String radiochecked = "";
  String dropchecked = "";
- private String[] state = { "IBN Live", "The Times of India", "The Hindu" };
- private String[] tele =  {"http://ibnlive.in.com/ibnrss/top.xml","http://ibnlive.in.com/ibnrss/rss/india/india.xml","http://ibnlive.in.com/ibnrss/rss/world/world.xml","http://ibnlive.in.com/ibnrss/rss/sports/sports.xml"};
+ private String[] state = { "The Telegraph", "The Times of India", "The Hindu" };
+ private String[] tele =  {"http://www.telegraphindia.com/1141123/jsp/frontpage/index.jsp#.VHHI02PCu3Q","http://www.telegraphindia.com/1141123/jsp/nation/index.jsp#.VHHIvmPCu3Q","http://www.telegraphindia.com/1141123/jsp/foreign/index.jsp#.VHHIw2PCu3Q","http://www.telegraphindia.com/1141123/jsp/sports/index.jsp#.VHHIxmPCu3Q"};
  private String[] hindu = {"http://m.thehindu.com/top-stories/","http://m.thehindu.com/national/","http://m.thehindu.com/international/","http://m.thehindu.com/sport/"};
  private String[] times = {"http://timesofindia.feedsportal.com/c/33039/f/533965/index.rss","http://timesofindia.feedsportal.com/c/33039/f/533916/index.rss","http://timesofindia.feedsportal.com/c/33039/f/533917/index.rss","http://timesofindia.feedsportal.com/c/33039/f/533921/index.rss"};
  
@@ -67,24 +67,24 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 			
 			
 			dropchecked = (String) spinnerOsversions.getSelectedItem();
-			if(dropchecked == "IBN Live"){
+			if(dropchecked == "The Telegraph"){
 					if(radiochecked == "Top News"){
-				    	Toast.makeText(getBaseContext(), "You are redirected to Ibn Live Top news section",
+				    	Toast.makeText(getBaseContext(), "You are redirected to The Telegraph Top news section",
 								Toast.LENGTH_LONG).show();	
 						Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(tele[0]));
 						startActivity(browserIntent);	
 						}else if(radiochecked == "India"){
-							Toast.makeText(getBaseContext(), "You are redirected to Ibn Live India's new section",
+							Toast.makeText(getBaseContext(), "You are redirected to The Telegraph India's new section",
 									Toast.LENGTH_LONG).show();	
 							Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(tele[1]));
 							startActivity(browserIntent);					
 								}else if(radiochecked == "World"){
-									Toast.makeText(getBaseContext(), "You are redirected to Ibn Live International news section",
+									Toast.makeText(getBaseContext(), "You are redirected to The Telegraph International news section",
 											Toast.LENGTH_LONG).show();	
 									Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(tele[2]));
 									startActivity(browserIntent);
 								}else if(radiochecked == "Sports"){
-									Toast.makeText(getBaseContext(), "You are redirected to Ibn Live Sports news section",
+									Toast.makeText(getBaseContext(), "You are redirected to The Telegraph Sports news section",
 											Toast.LENGTH_LONG).show();	
 										Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(tele[3]));
 										startActivity(browserIntent);
