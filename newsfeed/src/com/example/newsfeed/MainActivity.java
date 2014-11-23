@@ -1,4 +1,4 @@
-package com.example.efilternewsfeed;
+package com.example.newsfeed;
 
 import android.app.Activity;
 import android.content.Intent;
